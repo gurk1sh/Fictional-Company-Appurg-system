@@ -9,15 +9,16 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <VBox prefHeight="600.0" prefWidth="900.0">
          <children>
@@ -83,32 +84,32 @@
                                  <children>
                                     <VBox layoutX="24.0" layoutY="78.0" prefHeight="325.0" prefWidth="203.0">
                                        <children>
-                                          <TextField alignment="CENTER">
+                                          <TextField fx:id="namn">
                                              <VBox.margin>
                                                 <Insets bottom="25.0" />
                                              </VBox.margin>
                                           </TextField>
-                                          <TextField>
+                                          <TextField fx:id="anvnamn">
                                              <VBox.margin>
                                                 <Insets bottom="25.0" />
                                              </VBox.margin>
                                           </TextField>
-                                          <TextField>
+                                          <TextField fx:id="email">
                                              <VBox.margin>
                                                 <Insets bottom="25.0" />
                                              </VBox.margin>
                                           </TextField>
-                                          <TextField alignment="CENTER_RIGHT">
+                                          <TextField fx:id="position">
                                              <VBox.margin>
                                                 <Insets bottom="25.0" />
                                              </VBox.margin>
                                           </TextField>
-                                          <TextField>
+                                          <TextField fx:id="workid">
                                              <VBox.margin>
                                                 <Insets bottom="25.0" />
                                              </VBox.margin>
                                           </TextField>
-                                          <TextField>
+                                          <TextField fx:id="telephone">
                                              <VBox.margin>
                                                 <Insets bottom="25.0" />
                                              </VBox.margin>
@@ -159,4 +160,10 @@
          </children>
       </VBox>
    </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
 </GridPane>
