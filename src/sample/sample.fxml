@@ -1,8 +1,45 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="487.0" prefWidth="480.0">
+         <children>
+            <TextField layoutX="272.0" layoutY="231.0" promptText="Namn" />
+            <PasswordField alignment="TOP_LEFT" layoutX="272.0" layoutY="264.0" promptText="Lösenord" />
+            <TextField layoutX="272.0" layoutY="301.0" promptText="E-mail" />
+            <TextField layoutX="272.0" layoutY="336.0" promptText="ArbetsID" />
+            <Button layoutX="272.0" layoutY="423.0" mnemonicParsing="false" style="-fx-background-color: #87CEFA;" text="Registrera" textFill="#0a0a0a" />
+            <Button alignment="TOP_LEFT" layoutX="67.0" layoutY="423.0" mnemonicParsing="false" style="-fx-background-color: #87CEFA;" text="Gå tillbaka" />
+            <Label layoutX="81.0" layoutY="235.0" text="Namn" />
+            <Label layoutX="78.0" layoutY="268.0" text="Lösenord" />
+            <Label layoutX="77.0" layoutY="305.0" prefHeight="17.0" prefWidth="84.0" text="E-mail" />
+            <Label layoutX="78.0" layoutY="340.0" text="ArbetsID" />
+            <Label layoutX="76.0" layoutY="377.0" text="Position" />
+            <ImageView fitHeight="242.0" fitWidth="257.0" layoutX="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://i.ibb.co/P4j1Fm4/logo.png" />
+               </image>
+            </ImageView>
+            <ChoiceBox fx:id="Position" layoutX="273.0" layoutY="372.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+   </children>
 </GridPane>
