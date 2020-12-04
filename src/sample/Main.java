@@ -17,7 +17,7 @@ public class Main extends Application {
         loadWindow("Landingpage.fxml", primaryStage);
 
     }
-
+//
     public void loadWindow(String fxml, Stage ps) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
