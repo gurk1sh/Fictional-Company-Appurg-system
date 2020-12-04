@@ -1,28 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <MenuBar layoutX="3.0" layoutY="14.0" prefHeight="25.0" prefWidth="790.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Appurg">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <ImageView fitHeight="356.0" fitWidth="366.0" layoutX="246.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="https://i.ibb.co/P4j1Fm4/logo.png" />
-         </image>
-      </ImageView>
-   </children>
-</AnchorPane>
+<SplitPane dividerPositions="0.2505567928730512, 0.5" focusTraversable="true" prefHeight="618.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <items>
+        <AnchorPane maxWidth="-Infinity" prefHeight="617.0" prefWidth="200.0" style="-fx-background-color: #87CEFA;">
+         <children>
+            <Text layoutX="44.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appurg" wrappingWidth="112.4000244140625">
+               <font>
+                  <Font name="Cambria" size="30.0" />
+               </font>
+            </Text>
+            <Button layoutX="68.0" layoutY="565.0" mnemonicParsing="false" text="Logga ut" />
+            <TextField layoutX="25.0" layoutY="102.0" promptText="Search" />
+            <Accordion layoutX="-2.0" layoutY="149.0">
+              <panes>
+                <TitledPane animated="false" text="Felprocedurer">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Arbetsprocedurer">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView layoutY="-9.0" prefHeight="200.0" prefWidth="202.0" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </children></AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                    <ImageView fitHeight="356.0" fitWidth="366.0" layoutX="111.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="https://i.ibb.co/P4j1Fm4/logo.png" />
+                        </image>
+                    </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane maxWidth="-Infinity" prefHeight="567.0" prefWidth="177.0" style="-fx-background-color: #87CEFA';">
+            <children>
+                <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" textAlignment="CENTER" wrapText="false">
+                    <font>
+                        <Font size="18.0" fx:id="x1" />
+                    </font>
+                    <textFill>
+                        <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                    </textFill>
+                </Label>
+                <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="https://i.ibb.co/41g2LWw/profilepic.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="landingClick" fitHeight="71.0" fitWidth="71.0" layoutX="97.0" layoutY="6.0" onMouseClicked="#onLandingClick" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="https://i.ibb.co/P4j1Fm4/logo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>
