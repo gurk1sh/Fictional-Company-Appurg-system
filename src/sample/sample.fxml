@@ -22,11 +22,11 @@
    <children>
       <Pane prefHeight="487.0" prefWidth="480.0">
          <children>
-            <TextField layoutX="272.0" layoutY="231.0" promptText="Namn" />
+            <TextField fx:id="uName" layoutX="272.0" layoutY="231.0" promptText="Namn" />
             <PasswordField alignment="TOP_LEFT" layoutX="272.0" layoutY="264.0" promptText="Lösenord" />
             <TextField layoutX="272.0" layoutY="301.0" promptText="E-mail" />
             <TextField layoutX="272.0" layoutY="336.0" promptText="ArbetsID" />
-            <Button layoutX="272.0" layoutY="423.0" mnemonicParsing="false" style="-fx-background-color: #87CEFA;" text="Registrera" textFill="#0a0a0a" />
+            <Button layoutX="272.0" layoutY="423.0" mnemonicParsing="false" style="-fx-background-color: #87CEFA;" onMouseClicked="#registerUser" text="Registrera" textFill="#0a0a0a" />
             <Button alignment="TOP_LEFT" layoutX="67.0" layoutY="423.0" mnemonicParsing="false" style="-fx-background-color: #87CEFA;" text="Gå tillbaka" />
             <Label layoutX="81.0" layoutY="235.0" text="Namn" />
             <Label layoutX="78.0" layoutY="268.0" text="Lösenord" />

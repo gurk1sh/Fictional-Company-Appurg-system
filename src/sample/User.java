@@ -9,6 +9,15 @@ public class User {
     private String position;
     private String telephone;
 
+    public User()
+    {
+
+    }
+
+    public User(String namn) {
+        this.Namn = namn;
+    }
+
     public User(String namn, String anvNamn, String losenord, String email, int arbetsId, String position, String telePhone) {
         this.Namn = namn;
         this.anvNamn = anvNamn;

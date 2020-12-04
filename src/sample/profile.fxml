@@ -140,7 +140,7 @@
                               <Image url="https://i.ibb.co/41g2LWw/profilepic.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="97.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="landingClick" fitHeight="71.0" fitWidth="71.0" layoutX="97.0" layoutY="6.0" onMouseClicked="#onLandingClick" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="https://i.ibb.co/P4j1Fm4/logo.png" />
                            </image>

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <MenuBar VBox.vgrow="NEVER">
          <menus>
@@ -38,8 +38,8 @@
          <children>
             <Text layoutX="132.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Användarnamn" />
             <Text layoutX="149.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lösenord" />
-            <Button layoutX="151.0" layoutY="307.0" mnemonicParsing="false" text="Registrera användare" />
-            <Button layoutX="346.0" layoutY="307.0" mnemonicParsing="false" text="Logga in" />
+            <Button fx:id="moveToRegister" layoutX="151.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onRegisterClick" text="Registrera användare" />
+            <Button fx:id="submit" layoutX="346.0" layoutY="307.0" mnemonicParsing="false" onAction="#onLoginClick" text="Logga in" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="227.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="https://i.ibb.co/P4j1Fm4/logo.png" />
