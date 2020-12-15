@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Work_Procedures.WorkProcedureController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <MenuBar VBox.vgrow="NEVER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Appurg" />
+               </menus>
+            </MenuBar>
+            <SplitPane dividerPositions="0.18262806236080179, 0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+               <items>
+                  <AnchorPane maxWidth="220.0" prefHeight="567.0" prefWidth="220.0" style="-fx-background-color: rgb(23,97,160);">
+                     <children>
+                        <Text fx:id="appurg" fill="WHITE" layoutX="70.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appurg" wrappingWidth="80.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="74.0" layoutY="489.0" mnemonicParsing="false" text="Logga ut" />
+                        <TextField layoutX="36.0" layoutY="86.0" promptText="Sök" />
+                        <Accordion fx:id="accordion" layoutX="23.0" layoutY="139.0" prefHeight="75.0" prefWidth="175.0">
+                           <panes>
+                              <TitledPane animated="false" prefHeight="175.0" prefWidth="175.0" text="Felprocedurer">
+                                 <content>
+                                    <AnchorPane minHeight="-Infinity" minWidth="0.0" prefHeight="175.0" prefWidth="173.0" style="-fx-background-color: null;">
+                                       <children>
+                                          <ListView fx:id="ErrorProcedures" onMouseClicked="#goToErrorProcedures" prefHeight="175.0" prefWidth="175.0" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="titledPaneWP" animated="false" prefHeight="50.0" prefWidth="175.0" text="Arbetsprocedurer">
+                                 <content>
+                                    <AnchorPane minHeight="-Infinity" minWidth="0.0" prefHeight="175.0" prefWidth="173.0">
+                                       <children>
+                                          <ListView fx:id="WorkProcedures" prefHeight="175.0" prefWidth="175.0" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxWidth="-Infinity" prefHeight="567.0" prefWidth="500.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="567.0" prefWidth="500.0" style="-fx-background-color: rgb(23,97,160);">
+                           <content>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="565.0" prefWidth="500.0" style="-fx-background-color: rgb(23.0, 97.0, 160.0);">
+                                 <children>
+                                    <Label layoutX="15.0" layoutY="73.0" prefWidth="155.0" text="Arbetsprocedurer" textFill="WHITE">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <ListView fx:id="arbetsprocedurer" layoutX="15.0" layoutY="117.0" prefHeight="420.0" prefWidth="155.0" style="-fx-border-style: solid; -fx-border-width: 2; -fx-border-color: lightblue;" />
+                                    <TextFlow fx:id="textFlow" layoutX="208.0" layoutY="117.0" prefHeight="420.0" prefWidth="275.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-color: lightblue; -fx-border-width: 2;" />
+                                    <Button fx:id="newProcedure" layoutX="208.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#addNew" prefHeight="30.0" text="Lägg till arbetsprocedur" />
+                                    <TextField fx:id="maskin" editable="false" layoutX="14.0" layoutY="14.0" prefWidth="249.0" text="">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxWidth="-Infinity" prefHeight="567.0" prefWidth="166.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x1" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                           </textFill>
+                        </Label>
+                        <ImageView fx:id="profile" fitHeight="71.0" fitWidth="71.0" layoutX="14.0" layoutY="6.0" onMouseClicked="#onProfileClick" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="https://i.ibb.co/41g2LWw/profilepic.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="landing" fitHeight="71.0" fitWidth="71.0" layoutX="85.0" layoutY="6.0" onMouseClicked="#onLandingClick" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="https://i.ibb.co/P4j1Fm4/logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+               <children>
+                  <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
