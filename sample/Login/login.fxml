@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Login.LoginController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: rgb(23.0, 97.0, 160.0);" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="624.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://i.ibb.co/XzMDwvX/pattern.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="100.0" layoutY="75.0" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: white;">
+               <children>
+                  <TextField fx:id="username" layoutX="408.0" layoutY="175.0" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: lightblue;" />
+                  <Button fx:id="submit" layoutX="408.0" layoutY="327.0" mnemonicParsing="false" onAction="#onLoginClick" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: rgb(23.0, 97.0, 160.0);" text="Logga in" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="moveToRegister" layoutX="408.0" layoutY="389.0" mnemonicParsing="false" onMouseClicked="#onRegisterClick" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: white;" text="Registrera användare">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text fx:id="password" layoutX="409.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lösenord" />
+                  <Text fx:id="userName" layoutX="409.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Användarnamn" />
+                  <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="436.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="https://i.ibb.co/P4j1Fm4/logo.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="pw" layoutX="408.0" layoutY="255.0" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: lightblue;" />
+                  <ImageView fitHeight="450.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="https://i.ibb.co/88z481Q/code.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow height="20.0" radius="9.5" width="20.0" />
+               </effect>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

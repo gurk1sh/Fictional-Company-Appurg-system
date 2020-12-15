@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Register.RegisterController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://i.ibb.co/XzMDwvX/pattern.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="100.0" layoutY="75.0" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: white;">
+               <children>
+                  <Button fx:id="registerButton" layoutX="517.0" layoutY="393.0" mnemonicParsing="false" onMouseClicked="#registerUser" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: rgb(23,97,160);" text="Registrera" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" layoutX="364.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#moveBack" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: lightgray;" text="Gå tillbaka">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="436.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="https://i.ibb.co/P4j1Fm4/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="user" layoutX="517.0" layoutY="145.0" prefHeight="17.0" prefWidth="130.0" text="Användarnamn" />
+                  <TextField fx:id="userName" alignment="TOP_LEFT" layoutX="517.0" layoutY="162.0" prefHeight="30.0" prefWidth="140.0" promptText="Användarnamn" />
+                  <Label fx:id="mail" layoutX="343.0" layoutY="263.0" prefHeight="17.0" prefWidth="84.0" text="E-mail" />
+                  <TextField fx:id="email" layoutX="344.0" layoutY="280.0" prefHeight="30.0" prefWidth="315.0" promptText="E-mail" />
+                  <Label fx:id="ID" layoutX="344.0" layoutY="208.0" prefHeight="17.0" prefWidth="106.0" text="ArbetsID" />
+                  <TextField fx:id="arbetsID" layoutX="344.0" layoutY="225.0" prefHeight="30.0" prefWidth="140.0" promptText="ArbetsID" />
+                  <Label fx:id="pos" layoutX="517.0" layoutY="322.0" prefHeight="17.0" prefWidth="84.0" text="Position" />
+                  <ChoiceBox fx:id="Position" layoutX="517.0" layoutY="339.0" prefHeight="30.0" prefWidth="140.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ChoiceBox>
+                  <Label fx:id="name" layoutX="343.0" layoutY="145.0" prefHeight="17.0" prefWidth="84.0" text="Namn" />
+                  <TextField fx:id="namn" layoutX="344.0" layoutY="162.0" prefHeight="30.0" prefWidth="140.0" promptText="Namn" />
+                  <HBox layoutX="84.0" layoutY="390.0" prefHeight="100.0" prefWidth="200.0" />
+                  <ImageView fitHeight="450.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="https://i.ibb.co/88z481Q/code.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="telephone" layoutX="344.0" layoutY="339.0" prefHeight="30.0" prefWidth="140.0" />
+                  <PasswordField fx:id="pw" layoutX="517.0" layoutY="225.0" prefHeight="30.0" prefWidth="140.0" promptText="Lösenord" />
+                  <Label fx:id="pass" layoutX="517.0" layoutY="208.0" prefHeight="17.0" prefWidth="84.0" text="Lösenord" />
+                  <Label fx:id="tp" layoutX="344.0" layoutY="322.0" prefHeight="17.0" prefWidth="114.0" text="Telefonnummer" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
